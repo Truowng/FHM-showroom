@@ -1,0 +1,40 @@
+.scroll-to-move-container {
+  width: 100vw;
+  height: 80vh;
+  border: 0.1rem solid var(--black);
+  overflow: hidden;
+}
+
+.scroll-to-move-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem 0;
+}
+
+.scroll-to-move-wrapper {
+  transform: translate(-2%, -33%) rotate(45deg);
+}
+/* 
+.scroll-to-move-item-container:nth-of-type(1) {
+  transform: translate(42%) rotate(45deg);
+}
+.scroll-to-move-item-container:nth-of-type(2) {
+  transform: translate(31%) rotate(45deg);
+}
+.scroll-to-move-item-container:nth-of-type(3) {
+  transform: translate(20%) rotate(45deg);
+}
+.scroll-to-move-item-container:nth-of-type(4) {
+  transform: translate(9%) rotate(45deg);
+} */
+
+.scroll-to-move-item {
+  background-image: url("https://images.unsplash.com/photo-1661264538199-0ec9236cbacc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 35vw;
+  height: 25vw;
+  margin: 0 1.25rem;
+}

@@ -1,0 +1,42 @@
+:root {
+  --black: #000;
+  --white: #fff;
+}
+
+@font-face {
+  font-family: Berfilem;
+  src: url(../fonts/DFVNBerfilem/OpenType-PS/DFVN\ Berfilem.otf);
+}
+
+@font-face {
+  font-family: Geomanist;
+  src: url(../fonts/Geomanist/Geomanist-Light.otf);
+}
+
+@font-face {
+  font-family: Ortica;
+  src: url(../fonts/Ortica/desktop/Ortica-Light.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  background-color: #fff;
+  font-family: Berfilem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.content-container {
+  margin-top: 12rem;
+}

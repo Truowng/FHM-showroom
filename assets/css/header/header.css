@@ -1,0 +1,23 @@
+.header-logo {
+  position: fixed;
+  font-size: 4vw;
+  mix-blend-mode: difference;
+  color: var(--white);
+  top: 3rem;
+  left: 3rem;
+}
+
+.header-btn {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 3rem;
+  top: 3rem;
+}
+
+.header-text {
+  font-size: 4vw;
+  mix-blend-mode: difference;
+  color: var(--black);
+}
