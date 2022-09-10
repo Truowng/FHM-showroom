@@ -1,0 +1,23 @@
+.scroll-to-scale-container {
+  width: 100vw;
+  height: var(--scroll-to-scale-container-height);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 0.1rem solid var(--black);
+}
+
+.scroll-to-scale-background {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 0.1rem solid black;
+}
+
+.scroll-to-scale-subject {
+  width: 50%;
+  position: absolute;
+  bottom: -10%;
+  left: 48%;
+  transform: translateX(-50%);
+}

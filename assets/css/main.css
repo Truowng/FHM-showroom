@@ -2,3 +2,4 @@
 @import url(./header/header.css);
 @import url(./cursor/cursor.css);
 @import url(./components/scroll/scrollToMove.css);
+@import url(./components/scroll/scrollToScale.css);
