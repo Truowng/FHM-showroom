@@ -1,9 +1,9 @@
 .scroll-to-move-container {
   width: 100vw;
   height: 100vh;
-  border: 0.1rem solid var(--black);
+  /* border: 0.1rem solid var(--black); */
   overflow: hidden;
-  margin-top: 20rem;
+  margin-top: 2rem;
 }
 
 .scroll-to-move-item-container {
@@ -11,7 +11,6 @@
   justify-content: space-between;
   align-items: center;
   margin: 2.5rem 0;
-  transition: all ease 0.09s;
 }
 
 .scroll-to-move-wrapper {

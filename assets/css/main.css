@@ -1,5 +1,7 @@
 @import url(./base.css);
 @import url(./header/header.css);
 @import url(./cursor/cursor.css);
+@import url(./modal/modal.css);
 @import url(./components/scroll/scrollToMove.css);
 @import url(./components/scroll/scrollToScale.css);
+@import url(./components/parallax/parallax.css);

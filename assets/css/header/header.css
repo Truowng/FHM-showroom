@@ -6,6 +6,7 @@
   top: 3rem;
   left: 3rem;
   z-index: 10;
+  letter-spacing: 0.2rem;
 }
 
 .header-btn {
@@ -23,4 +24,5 @@
   font-size: 4vw;
   mix-blend-mode: difference;
   color: var(--white);
+  letter-spacing: 0.2rem;
 }

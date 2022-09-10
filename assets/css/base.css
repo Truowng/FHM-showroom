@@ -32,11 +32,14 @@ body {
   font-family: Berfilem;
   position: relative;
   overflow-x: hidden;
+  overscroll-behavior: none;
+  cursor: none;
 }
 
 a {
   text-decoration: none;
   color: var(--black);
+  cursor: none;
 }
 
 .content-container {
@@ -53,4 +56,24 @@ body::-webkit-scrollbar-thumb:hover {
 
 body::-webkit-scrollbar {
   width: 1rem;
+}
+
+/* animation */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
