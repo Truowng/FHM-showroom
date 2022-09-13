@@ -11,9 +11,9 @@ let parallaxImages = [...document.querySelectorAll(".parallax-img")];
 let parallaxSlider = document.querySelector(".parallax-slider-container");
 let parallaxSliderWidth;
 let parallaxImageWidth;
-let current = 0;
-let target = 0;
-let ease = 0.08;
+let parallaxCurrent = 0;
+let parallaxTarget = 0;
+let parallaxEase = 0.08;
 
 parallaxImages.forEach((parallaxImage, index) => {
   parallaxImage.style.backgroundImage = `url(${parallaxImagesGallery[index]})`;
@@ -38,15 +38,17 @@ const init = () => {
 window.addEventListener("resize", init);
 
 const parallaxAnimate = () => {
-  current = parseFloat(lerp(current, target, ease)).toFixed(2);
-  target = window.scrollY;
+  parallaxCurrent = parseFloat(
+    lerp(parallaxCurrent, parallaxTarget, parallaxEase)
+  ).toFixed(2);
+  parallaxTarget = window.scrollY;
   parallaxImageAnimate();
-  setTransform(parallaxSlider, `translateX(-${current}px)`);
+  setTransform(parallaxSlider, `translateX(-${parallaxCurrent}px)`);
   requestAnimationFrame(parallaxAnimate);
 };
 
 const parallaxImageAnimate = () => {
-  let ratio = current / parallaxImageWidth;
+  let ratio = parallaxCurrent / parallaxImageWidth;
   let intersectionRatioValue;
 
   parallaxImages.forEach((parallaxImage, index) => {

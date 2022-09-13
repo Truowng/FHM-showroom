@@ -1,7 +1,6 @@
 .scroll-to-move-container {
   width: 100vw;
   height: 100vh;
-  /* border: 0.1rem solid var(--black); */
   overflow: hidden;
   margin-top: 2rem;
 }

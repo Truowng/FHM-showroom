@@ -7,14 +7,11 @@ let show = 0;
 function toggle() {
   if (show === 0) {
     modal.style.display = "flex";
-    modal.style.animation = "fadeIn ease 0.5s";
+    modal.style.transform = "translateY(0%)";
     show = 1;
   } else {
-    modal.style.animation = "fadeOut ease 0.5s";
-    const closeModal = () => {
-      modal.style.display = "none";
-    };
-    setTimeout(closeModal, 500);
+    modal.style.transform = "translateY(-100%)";
+    modal.style.transition = "all cubic-bezier(0.25, 0, 0, 1) 0.8s";
     show = 0;
   }
 }
