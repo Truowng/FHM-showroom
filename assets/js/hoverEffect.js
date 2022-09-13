@@ -63,7 +63,7 @@ const hoverEffectAnimate = () => {
   ).toFixed(2);
   hoverEffectTarget = window.scrollY;
   hoverEffectImageAnimate();
-  setTransform(hoverEffectSlider, `translateX(-${hoverEffectCurrent}px)`);
+  setTransform(hoverEffectSlider, `translateY(-${hoverEffectCurrent}px)`);
   requestAnimationFrame(hoverEffectAnimate);
 };
 
