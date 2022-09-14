@@ -3,6 +3,7 @@
   height: 100vh;
   overflow: hidden;
   margin-top: 2rem;
+  border: 0.2rem solid var(--black);
 }
 
 .scroll-to-move-item-container {

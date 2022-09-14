@@ -10,10 +10,19 @@ const hoverEffectImagesGallery = [
 const hoverEffectDisplacementImages = [
   "https://images.unsplash.com/photo-1608930361232-67c6350dab78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
   "https://images.unsplash.com/photo-1603665301175-57ba46f392bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-  "https://images.unsplash.com/photo-1548700819-892a76eed325?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80",
+  "https://images.unsplash.com/photo-1535376472810-5d229c65da09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
   "https://images.unsplash.com/photo-1532680678473-a16f2cda8e43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-  "https://images.unsplash.com/photo-1544108182-8810058c3a7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
-  "https://images.unsplash.com/photo-1486551937199-baf066858de7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=633&q=80",
+  "https://images.unsplash.com/photo-1515155075601-23009d0cb6d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80",
+  "https://images.unsplash.com/photo-1497506928652-500166625d53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=422&q=80",
+];
+
+const hoverEffectImagesGallery2 = [
+  "https://images.unsplash.com/photo-1516259670444-ad07068e14e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+  "https://images.unsplash.com/photo-1560840067-ddcaeb7831d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=479&q=80",
+  "https://images.unsplash.com/photo-1567320743368-9db24e12ebf0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=539&q=80",
+  "https://images.unsplash.com/photo-1603929260784-262f38411fe4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+  "https://images.unsplash.com/photo-1534237710431-e2fc698436d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+  "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=536&q=80",
 ];
 
 let hoverEffectImages = [...document.querySelectorAll(".hover-img")];
@@ -27,9 +36,8 @@ let hoverEffectEase = 0.08;
 hoverEffectImages.forEach((hoverEffectImage, index) => {
   new hoverEffect({
     parent: hoverEffectImage,
-    intensity: 0.1,
-    image1:
-      "https://images.unsplash.com/photo-1626362073981-75205f952cf3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1233&q=80",
+    intensity: 0.5,
+    image1: hoverEffectImagesGallery2[index],
     image2: hoverEffectImagesGallery[index],
     displacementImage: hoverEffectDisplacementImages[index],
     easing: Expo.easeOut,
@@ -63,7 +71,7 @@ const hoverEffectAnimate = () => {
   ).toFixed(2);
   hoverEffectTarget = window.scrollY;
   hoverEffectImageAnimate();
-  setTransform(hoverEffectSlider, `translateY(-${hoverEffectCurrent}px)`);
+  setTransform(hoverEffectSlider, `translateX(-${hoverEffectCurrent}px)`);
   requestAnimationFrame(hoverEffectAnimate);
 };
 

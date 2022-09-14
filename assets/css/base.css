@@ -33,7 +33,7 @@ body {
   position: relative;
   overflow-x: hidden;
   overscroll-behavior: none;
-  cursor: none;
+  /* cursor: none; */
 }
 
 a {
